@@ -1,6 +1,7 @@
 import { VStack } from '@chakra-ui/react';
 
-import { ProfileNotifications } from '~/components/ProfileNotifications/ProfileNotifications';
+import { ProfileNotifications } from '~/components/ProfileNotifications';
+import { mockProfileNotifications } from '~/constants/mockData';
 
 export const RightAside = () => (
     <VStack
@@ -11,6 +12,10 @@ export const RightAside = () => (
         maxW='256px'
         display={{ sm: 'none', lg: 'flex' }}
     >
-        <ProfileNotifications />
+        <ProfileNotifications
+            profileNotifications={mockProfileNotifications}
+            stack='v'
+            iconSize='md'
+        />
     </VStack>
 );

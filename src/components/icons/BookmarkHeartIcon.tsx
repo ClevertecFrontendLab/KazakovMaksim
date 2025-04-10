@@ -1,14 +1,16 @@
 import { Icon, useBreakpointValue } from '@chakra-ui/react';
+import { FC } from 'react';
 
 import { profileIconsSizes } from '~/constants/iconSizes';
+import { NotificationIconProps } from '~/types';
 
-export const BookmarkHeartIcon = () => {
+export const BookmarkHeartIcon: FC<NotificationIconProps> = ({ externalSize = 0 }) => {
     const size = useBreakpointValue(profileIconsSizes);
 
     return (
         <Icon
-            width={`${size}px`}
-            height={`${size}px`}
+            width={`${externalSize || size}px`}
+            height={`${externalSize || size}px`}
             viewBox='0 0 16 16'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'

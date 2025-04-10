@@ -4,3 +4,7 @@ export interface User {
     nickname: string;
     imgSrc?: string;
 }
+
+export interface NotificationIconProps {
+    externalSize?: number;
+}

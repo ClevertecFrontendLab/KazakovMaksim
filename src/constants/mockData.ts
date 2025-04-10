@@ -12,6 +12,8 @@ import soups from '~/assets/img/soups.png';
 import therapeuticNutrition from '~/assets/img/therapeutic-nutrition.png';
 import veganCuisine from '~/assets/img/vegan-cuisine.png';
 
+export const mockProfileNotifications = { bookmarkHeart: 185, emojiHeart: 587, people: 589 };
+
 export const categoryIcons = {
     salads,
     appetizers,

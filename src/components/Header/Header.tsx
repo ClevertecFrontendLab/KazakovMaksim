@@ -6,6 +6,7 @@ import { CardAvatar } from '~/components/CardAvatar';
 import { Burger } from '~/components/Header/Burger';
 import { PotIcon, YeeDaaIcon } from '~/components/icons';
 import { ProfileNotifications } from '~/components/ProfileNotifications';
+import { mockProfileNotifications } from '~/constants/mockData';
 import { ROUTE_CONSTANTS } from '~/constants/routes';
 import { User } from '~/types';
 
@@ -44,7 +45,7 @@ export const Header = () => {
             {!isTablet && <CardAvatar user={mockUser} />}
             {isTablet && (
                 <HStack ml='auto' spacing={{ sm: '8px', '2sm': '16px' }}>
-                    <ProfileNotifications stack='h' />
+                    <ProfileNotifications profileNotifications={mockProfileNotifications} />
                     <Burger />
                 </HStack>
             )}
