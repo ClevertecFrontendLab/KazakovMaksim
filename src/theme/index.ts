@@ -1,5 +1,8 @@
 import { extendTheme } from '@chakra-ui/react';
 
+import { headingTheme } from '~/theme/heading';
+import { textTheme } from '~/theme/text';
+
 const breakpoints = {
     sm: '22.5rem', // 360px
     '2sm': '28.75rem', // 460px
@@ -28,6 +31,10 @@ const theme = extendTheme({
     colors,
     breakpoints,
     fonts,
+    components: {
+        Heading: headingTheme,
+        Text: textTheme,
+    },
 });
 
 export default theme;
