@@ -9,26 +9,24 @@ import { RightAside } from '~/components/RightAside';
 export const Layout = () => (
     <>
         <Header />
-        <main>
-            <HStack spacing='24px'>
-                <LeftAside />
-                <Suspense
-                    fallback={
-                        <Center flexGrow='1'>
-                            <Spinner
-                                size='xl'
-                                thickness='4px'
-                                speed='0.65s'
-                                emptyColor='lime.50'
-                                color='lime.150'
-                            />
-                        </Center>
-                    }
-                >
-                    <Outlet />
-                </Suspense>
-                <RightAside />
-            </HStack>
-        </main>
+        <HStack as='main' justifyContent='space-between' alignItems='flex-start'>
+            <LeftAside />
+            <Suspense
+                fallback={
+                    <Center flexGrow='1'>
+                        <Spinner
+                            size='xl'
+                            thickness='4px'
+                            speed='0.65s'
+                            emptyColor='lime.50'
+                            color='lime.150'
+                        />
+                    </Center>
+                }
+            >
+                <Outlet />
+            </Suspense>
+            <RightAside />
+        </HStack>
     </>
 );
