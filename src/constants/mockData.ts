@@ -1,4 +1,5 @@
 import appetizers from '~/assets/img/appetizers.png';
+import cutlet from '~/assets/img/cutlet.jpg';
 import dessertsAndPastries from '~/assets/img/desserts-and-pastries.png';
 import drinks from '~/assets/img/drinks.png';
 import grilledDishes from '~/assets/img/grilled-dishes.png';
@@ -6,8 +7,11 @@ import kidsMeals from '~/assets/img/kids-meals.png';
 import mainCourses from '~/assets/img/main-courses.png';
 import meatPreparations from '~/assets/img/meat-preparations.png';
 import nationalDishes from '~/assets/img/national-dishes.png';
+import pancakes from '~/assets/img/pancakes.jpg';
+import salad from '~/assets/img/salad.jpg';
 import salads from '~/assets/img/salads.png';
 import sauces from '~/assets/img/sauces.png';
+import soup from '~/assets/img/soup.jpg';
 import soups from '~/assets/img/soups.png';
 import therapeuticNutrition from '~/assets/img/therapeutic-nutrition.png';
 import veganCuisine from '~/assets/img/vegan-cuisine.png';
@@ -194,3 +198,71 @@ export const menuData = {
         ],
     },
 };
+
+export const mockProductCards = [
+    {
+        productTitle: 'Солянка с грибами',
+        productDesc:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+        imgSrc: soup,
+        profileNotifications: { bookmarkHeart: 1 },
+        category: {
+            name: 'Первые блюда',
+            imgSrc: soups,
+        },
+    },
+    {
+        productTitle: 'Капустные котлеты',
+        productDesc:
+            'Капустные котлеты по этому рецепту получаются необычайно пышными и  невероятно вкусными. Мягкий вкус и лёгкая пряная нотка наверняка помогут сделать эти чудесные котлеты из капусты одним из ваших любимых овощных  блюд.',
+        imgSrc: cutlet,
+        profileNotifications: { bookmarkHeart: 2, emojiHeart: 1 },
+        category: {
+            name: 'Веганские блюда',
+            imgSrc: veganCuisine,
+        },
+    },
+    {
+        productTitle: 'Оладьи на кефире "Пышные"',
+        productDesc:
+            'Очень вкусные и нежные оладьи на кефире. Настоятельно рекомендую пышные кефирные оладьи на завтрак.',
+        imgSrc: pancakes,
+        profileNotifications: { emojiHeart: 1 },
+        category: {
+            name: 'Десерты, выпечка',
+            imgSrc: dessertsAndPastries,
+        },
+    },
+    {
+        productTitle: 'Салат "Здоровье"',
+        productDesc:
+            'Сельдерей очень полезен для здоровья, пора набираться витаминов. Не  салат, а сплошное удовольствие:) Вкусный, необычный, а главное быстрый.',
+        imgSrc: salad,
+        category: {
+            name: 'Салаты',
+            imgSrc: salads,
+        },
+    },
+    {
+        productTitle: 'Солянка с грибами_',
+        productDesc:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+        imgSrc: soup,
+        profileNotifications: { bookmarkHeart: 1 },
+        category: {
+            name: 'Первые блюда',
+            imgSrc: soups,
+        },
+    },
+    {
+        productTitle: 'Капустные котлеты_',
+        productDesc:
+            'Капустные котлеты по этому рецепту получаются необычайно пышными и  невероятно вкусными. Мягкий вкус и лёгкая пряная нотка наверняка помогут сделать эти чудесные котлеты из капусты одним из ваших любимых овощных  блюд.',
+        imgSrc: cutlet,
+        profileNotifications: { bookmarkHeart: 2, emojiHeart: 1 },
+        category: {
+            name: 'Веганские блюда',
+            imgSrc: veganCuisine,
+        },
+    },
+];

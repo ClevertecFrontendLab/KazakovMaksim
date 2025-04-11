@@ -8,3 +8,9 @@ export interface User {
 export interface NotificationIconProps {
     externalSize?: number;
 }
+
+export interface ProfileNotificationsI {
+    bookmarkHeart?: number;
+    emojiHeart?: number;
+    people?: number;
+}

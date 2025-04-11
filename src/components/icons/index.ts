@@ -8,4 +8,5 @@ export { PotIcon } from './PotIcon';
 export { YeeDaaIcon } from './YeeDaaIcon';
 
 // others
+export { ArrowIcon } from './ArrowIcon';
 export { ExitIcon } from './ExitIcon';

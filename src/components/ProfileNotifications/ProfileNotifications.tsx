@@ -2,7 +2,7 @@ import { HStack, VStack } from '@chakra-ui/react';
 import { FC } from 'react';
 
 import { BookmarkHeartIcon, EmojiHeartIcon, PeopleIcon } from '~/components/icons';
-import { ProfileNotificationsI } from '~/components/ProductCard/ProductCard';
+import { ProfileNotificationsI } from '~/types';
 
 import { ProfileNotificationItem } from './ProfileNotificationItem/ProfileNotificationItem';
 
