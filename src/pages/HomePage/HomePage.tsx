@@ -14,6 +14,8 @@ const HomePage = () => (
         px={{ base: '16px', md: '20px', lg: '24px' }}
         pt={{ base: '16px', lg: '32px' }}
         m='0'
+        maxH='calc(100vh - 80px)'
+        overflowY='auto'
     >
         <VStack flexGrow='1'>
             <SectionHeading {...mockSectionHeading} />
