@@ -2,18 +2,24 @@ import appetizers from '~/assets/img/appetizers.png';
 import cutlet from '~/assets/img/cutlet.jpg';
 import dessertsAndPastries from '~/assets/img/desserts-and-pastries.png';
 import drinks from '~/assets/img/drinks.png';
+import elenaPovar from '~/assets/img/elena-povar.jpg';
+import fantasticCooking from '~/assets/img/fantastic-cooking.jpg';
 import grilledDishes from '~/assets/img/grilled-dishes.png';
+import ham from '~/assets/img/ham.jpg';
 import kidsMeals from '~/assets/img/kids-meals.png';
 import mainCourses from '~/assets/img/main-courses.png';
 import meatPreparations from '~/assets/img/meat-preparations.png';
 import nationalDishes from '~/assets/img/national-dishes.png';
+import noodles from '~/assets/img/noodles.jpg';
 import pancakes from '~/assets/img/pancakes.jpg';
 import salad from '~/assets/img/salad.jpg';
 import salads from '~/assets/img/salads.png';
 import sauces from '~/assets/img/sauces.png';
 import soup from '~/assets/img/soup.jpg';
 import soups from '~/assets/img/soups.png';
+import spaghetti from '~/assets/img/spaghetti.jpg';
 import therapeuticNutrition from '~/assets/img/therapeutic-nutrition.png';
+import tomyum from '~/assets/img/tomyum.jpg';
 import veganCuisine from '~/assets/img/vegan-cuisine.png';
 
 export const mockProfileNotifications = { bookmarkHeart: 185, emojiHeart: 587, people: 589 };
@@ -263,6 +269,61 @@ export const mockProductCards = [
         category: {
             name: 'Веганские блюда',
             imgSrc: veganCuisine,
+        },
+    },
+];
+
+export const mockProductHCards = [
+    {
+        productTitle: 'Кнели со спагетти',
+        productDesc:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+        imgSrc: spaghetti,
+        profileNotifications: { bookmarkHeart: 85, emojiHeart: 152 },
+        category: {
+            name: 'Вторые блюда',
+            imgSrc: mainCourses,
+        },
+    },
+    {
+        productTitle: 'Пряная ветчина по итальянски',
+        productDesc:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+        imgSrc: ham,
+        profileNotifications: { bookmarkHeart: 159, emojiHeart: 259 },
+        category: {
+            name: 'Вторые блюда',
+            imgSrc: veganCuisine,
+        },
+        recommendation: {
+            name: 'Елена Высоцкая',
+            imgSrc: elenaPovar,
+        },
+    },
+    {
+        productTitle: 'Лапша с курицей и шафраном ',
+        productDesc:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+        imgSrc: noodles,
+        profileNotifications: { bookmarkHeart: 258, emojiHeart: 342 },
+        category: {
+            name: 'Вторые блюда',
+            imgSrc: veganCuisine,
+        },
+        recommendation: {
+            name: 'Alex Cook',
+            imgSrc: fantasticCooking,
+        },
+    },
+    {
+        productTitle: 'Том-ям с капустой кимчи',
+        productDesc:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+        imgSrc: tomyum,
+        profileNotifications: { bookmarkHeart: 124, emojiHeart: 324 },
+        category: {
+            name: 'Национальные',
+            imgSrc: nationalDishes,
         },
     },
 ];
