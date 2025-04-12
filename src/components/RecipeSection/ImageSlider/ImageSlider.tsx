@@ -11,14 +11,15 @@ export const ImageSlider = () => {
         lg: false,
     });
 
+    const paddings = useBreakpointValue({
+        base: '32px', // 16px * 2
+        md: '40px', // 20px * 2
+        lg: '560px', // 256px * 2 + 24px * 2
+    });
+
     return (
-        <Box
-            w={isTablet ? 'auto' : 'calc(100vw - 256px * 2 - 24px * 2)'}
-            maxW='1360px'
-            overflow='hidden'
-            pos='relative'
-        >
-            <HStack spacing={{ base: '3', xl: '3', '2xl': '6' }} alignItems='stretch'>
+        <Box w={`calc(100vw - ${paddings})`} maxW='1360px' overflow='hidden' pos='relative'>
+            <HStack spacing={{ base: '3', '2xl': '6' }} alignItems='stretch'>
                 {mockProductCards.map((mockProductCard) => (
                     <ProductCard key={mockProductCard.productTitle} {...mockProductCard} />
                 ))}
