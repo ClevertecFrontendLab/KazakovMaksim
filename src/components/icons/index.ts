@@ -10,3 +10,6 @@ export { YeeDaaIcon } from './YeeDaaIcon';
 // others
 export { ArrowIcon } from './ArrowIcon';
 export { ExitIcon } from './ExitIcon';
+export { FilterIcon } from './FilterIcon';
+export { MagnifierIcon } from './MagnifierIcon';
+export { WriteRecipeIcon } from './WriteRecipeIcon';
