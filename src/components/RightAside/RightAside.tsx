@@ -1,6 +1,7 @@
 import { useBreakpointValue, VStack } from '@chakra-ui/react';
 
 import { ProfileNotifications } from '~/components/ProfileNotifications';
+import { WriteRecipeButton } from '~/components/WriteRecipeButton';
 import { mockProfileNotifications } from '~/constants/mockData';
 
 export const RightAside = () => {
@@ -20,12 +21,14 @@ export const RightAside = () => {
             paddingBottom='32px'
             w='100%'
             maxW='249px'
+            justifyContent='space-between'
         >
             <ProfileNotifications
                 profileNotifications={mockProfileNotifications}
                 stack='v'
                 iconSize='md'
             />
+            <WriteRecipeButton />
         </VStack>
     );
 };
