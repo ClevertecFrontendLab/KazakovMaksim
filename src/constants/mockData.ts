@@ -1,4 +1,5 @@
 import appetizers from '~/assets/img/appetizers.png';
+import bakeAndPie from '~/assets/img/bake-and-pie.jpg';
 import cutlet from '~/assets/img/cutlet.jpg';
 import dessertsAndPastries from '~/assets/img/desserts-and-pastries.png';
 import drinks from '~/assets/img/drinks.png';
@@ -21,8 +22,30 @@ import spaghetti from '~/assets/img/spaghetti.jpg';
 import therapeuticNutrition from '~/assets/img/therapeutic-nutrition.png';
 import tomyum from '~/assets/img/tomyum.jpg';
 import veganCuisine from '~/assets/img/vegan-cuisine.png';
+import { User } from '~/types';
 
 export const mockProfileNotifications = { bookmarkHeart: 185, emojiHeart: 587, people: 589 };
+
+export const mockUsers: User[] = [
+    {
+        name: 'Елена',
+        surname: 'Высоцкая',
+        nickname: '@elenapovar',
+        imgSrc: elenaPovar,
+    },
+    {
+        name: 'Alex',
+        surname: 'Cook',
+        nickname: '@funtasticooking',
+        imgSrc: fantasticCooking,
+    },
+    {
+        name: 'Екатерина',
+        surname: 'Константинопольская',
+        nickname: '@bake_and_pie',
+        imgSrc: bakeAndPie,
+    },
+];
 
 export const categoryIcons = {
     salads,
@@ -325,5 +348,23 @@ export const mockProductHCards = [
             name: 'Национальные',
             imgSrc: nationalDishes,
         },
+    },
+];
+
+export const mockBlogCards = [
+    {
+        user: mockUsers[0],
+        description:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+    },
+    {
+        user: mockUsers[1],
+        description:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
+    },
+    {
+        user: mockUsers[2],
+        description:
+            'Как раз после праздников, когда мясные продукты еще остались, но никто их уже не хочет, время варить солянку.',
     },
 ];

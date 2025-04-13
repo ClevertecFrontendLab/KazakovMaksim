@@ -19,6 +19,14 @@ const mainTitle = defineStyle({
     lineHeight: [1.33, null, null, null, 1],
 });
 
+const blogTitle = defineStyle({
+    fontFamily: 'main',
+    fontWeight: ['500', null, null, null, null, '500', '400'],
+    fontSize: ['2xl', null, null, null, '2xl', '3xl', '4xl'],
+    lineHeight: [1.33, null, null, null, 1.33, 1.2, 1.1],
+    mb: ['3', null, null, null, null, '5', '8'],
+});
+
 const sectionTitle = defineStyle({
     ...baseStyles,
     fontSize: ['2xl', null, null, null, '3xl', '4xl', '5xl'],
@@ -45,5 +53,6 @@ export const headingTheme = defineStyleConfig({
         sectionTitle,
         cardTitle,
         hCardTitle,
+        blogTitle,
     },
 });

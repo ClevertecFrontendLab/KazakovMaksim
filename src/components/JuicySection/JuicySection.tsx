@@ -13,11 +13,9 @@ export const JuicySection = () => {
 
     return (
         <Box alignSelf='stretch' position='relative'>
-            <HStack justifyContent='space-between' mb={{ base: '3', xl: '4', '2xl': '6' }}>
-                <Heading variant='sectionTitle' as='h3'>
-                    Самое сочное
-                </Heading>
-            </HStack>
+            <Heading variant='sectionTitle' as='h3' mb={{ base: '3', xl: '4', '2xl': '6' }}>
+                Самое сочное
+            </Heading>
             <HStack
                 justifyContent='center'
                 flexWrap='wrap'
@@ -28,16 +26,12 @@ export const JuicySection = () => {
                 ))}
             </HStack>
             <Button
+                variant='blogButton'
                 top='0'
                 right='0'
                 m={isTablet ? '12px auto 0' : 'initial'}
                 pos={isTablet ? 'static' : 'absolute'}
-                display={isTablet ? 'block' : 'initial'}
-                h='initial'
-                p={{ base: '8px 16px', xl: '8px 16px', '2xl': '10px 24px' }}
                 rightIcon={<ArrowIcon direction='right' size={16} color='black' />}
-                lineHeight={{ base: '1.5', xl: '1.5', '2xl': '1.56' }}
-                fontSize={{ base: '16px', xl: '16px', '2xl': '18px' }}
                 bg='lime.400'
             >
                 Вся подборка

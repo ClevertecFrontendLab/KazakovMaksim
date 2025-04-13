@@ -1,23 +1,21 @@
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react';
 
-const baseStyles = {
-    fontSize: 'sm',
-    lineHeight: 1.43,
-};
-
 const avatarEmailText = defineStyle({
-    ...baseStyles,
+    fontSize: ['xs', null, null, 'xs', null, 'sm'],
     color: 'blackAlpha.700',
+    lineHeight: [1.43, null, null, 1.33, null, 1.43],
 });
 
 const avatarNameText = defineStyle({
-    fontSize: 'lg',
-    lineHeight: 1.56,
     fontWeight: 500,
-    whiteSpace: 'nowrap',
+    fontSize: ['md', null, null, 'md', null, 'lg'],
+    lineHeight: [1.5, null, null, 1.5, null, 1.56],
 });
 
-const cardText = defineStyle(baseStyles);
+const cardText = defineStyle({
+    fontSize: 'sm',
+    lineHeight: 1.43,
+});
 
 const titleText = defineStyle({
     lineHeight: 1.5,

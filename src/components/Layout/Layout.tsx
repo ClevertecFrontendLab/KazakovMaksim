@@ -9,7 +9,7 @@ import { RightAside } from '~/components/RightAside';
 export const Layout = () => (
     <>
         <Header />
-        <HStack as='main' justifyContent='space-between' alignItems='flex-start'>
+        <HStack as='main' justifyContent='space-between' alignItems='flex-start' gap='0'>
             <LeftAside />
             <Suspense
                 fallback={

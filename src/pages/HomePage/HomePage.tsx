@@ -1,5 +1,6 @@
 import { Container, VStack } from '@chakra-ui/react';
 
+import { FoodBlogSection } from '~/components/FoodBlogSection';
 import { JuicySection } from '~/components/JuicySection';
 import { RecipeSection } from '~/components/RecipeSection';
 import { SectionHeading } from '~/components/SectionHeading';
@@ -20,9 +21,10 @@ const HomePage = () => (
     >
         <VStack flexGrow='1'>
             <SectionHeading {...mockSectionHeading} />
-            <VStack spacing={{ base: '8', xl: '8', '2xl': '10' }}>
+            <VStack spacing={{ base: '8', xl: '10' }}>
                 <RecipeSection />
                 <JuicySection />
+                <FoodBlogSection />
             </VStack>
         </VStack>
     </Container>
