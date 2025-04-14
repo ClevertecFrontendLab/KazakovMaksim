@@ -4,6 +4,7 @@ import { FoodBlogSection } from '~/components/FoodBlogSection';
 import { JuicySection } from '~/components/JuicySection';
 import { RecipeSection } from '~/components/RecipeSection';
 import { RelevantSection } from '~/components/RelevantSection';
+import { SectionFilters } from '~/components/SectionFilters';
 import { SectionHeading } from '~/components/SectionHeading';
 
 const mockSectionHeading = {
@@ -20,7 +21,10 @@ const HomePage = () => (
         pb={{ base: '100px', lg: '100px', xl: '0' }}
     >
         <VStack flexGrow='1' gap='0'>
-            <SectionHeading {...mockSectionHeading} />
+            <VStack pb='56px' gap='8'>
+                <SectionHeading {...mockSectionHeading} />
+                <SectionFilters />
+            </VStack>
             <VStack spacing={{ base: '8', xl: '10' }}>
                 <RecipeSection />
                 <JuicySection />
