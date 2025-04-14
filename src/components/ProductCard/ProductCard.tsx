@@ -61,7 +61,7 @@ export const ProductCard: FC<ProductCardProps> = ({
                     p={{
                         base: `${withImg ? '7px 8px 3px 8px' : '11px'}`,
                         xl: `${withImg ? '11px' : '16px'}`,
-                        '2xl': `${withImg ? '16px' : '24px'} 19px`,
+                        '2xl': `${withImg ? '16px' : '24px'} 19px 19px`,
                     }}
                 >
                     <Heading
