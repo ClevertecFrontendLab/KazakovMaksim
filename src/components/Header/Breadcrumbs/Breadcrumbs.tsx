@@ -18,7 +18,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({ breadcrumbs }) => (
         separator={<ChevronRightIcon color='gray.500' />}
     >
         {breadcrumbs.map((bc) => (
-            <BreadcrumbItem>
+            <BreadcrumbItem key={bc}>
                 <BreadcrumbLink as={ReactRouterLink} to={ROUTE_CONSTANTS.APP}>
                     {bc}
                 </BreadcrumbLink>

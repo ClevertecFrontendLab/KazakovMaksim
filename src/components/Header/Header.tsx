@@ -1,5 +1,5 @@
 import { HStack, Link as ChakraLink, useBreakpointValue } from '@chakra-ui/react';
-import { Link as ReactRouterLink } from 'react-router';
+import { Link as ReactRouterLink, useLocation } from 'react-router';
 
 import { CardAvatar } from '~/components/CardAvatar';
 import { Breadcrumbs } from '~/components/Header/Breadcrumbs';
@@ -8,6 +8,7 @@ import { PotIcon, YeeDaaIcon } from '~/components/icons';
 import { ProfileNotifications } from '~/components/ProfileNotifications';
 import { mockProfileNotifications, mockUsers } from '~/constants/mockData';
 import { ROUTE_CONSTANTS } from '~/constants/routes';
+import { getBreadcrumbsFromPathname } from '~/helpers';
 
 export const Header = () => {
     const isTablet = useBreakpointValue({
@@ -15,6 +16,8 @@ export const Header = () => {
         sm: true,
         lg: false,
     });
+
+    const { pathname } = useLocation();
 
     return (
         <HStack
@@ -37,7 +40,7 @@ export const Header = () => {
                     <YeeDaaIcon />
                 </HStack>
             </ChakraLink>
-            {!isTablet && <Breadcrumbs breadcrumbs={['Главная']} />}
+            {!isTablet && <Breadcrumbs breadcrumbs={getBreadcrumbsFromPathname(pathname)} />}
             {!isTablet && <CardAvatar user={mockUsers[2]} />}
             {isTablet && (
                 <HStack ml='auto' spacing={{ sm: '8px', '2sm': '16px' }}>
