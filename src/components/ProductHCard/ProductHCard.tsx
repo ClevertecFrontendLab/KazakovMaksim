@@ -54,6 +54,11 @@ export const ProductHCard: FC<ProductHCardProps> = ({
             w='100%'
             borderRadius='lg'
             overflow='hidden'
+            _hover={{
+                cursor: 'pointer',
+                boxShadow:
+                    '0 2px 4px -1px rgba(32, 126, 0, 0.06), 0 4px 6px -1px rgba(32, 126, 0, 0.1)',
+            }}
         >
             <Image
                 objectFit={isTablet ? 'cover' : 'contain'}

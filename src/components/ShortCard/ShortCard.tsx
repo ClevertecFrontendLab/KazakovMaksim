@@ -14,6 +14,11 @@ export const ShortCard: FC<ShortCardProps> = ({ productTitle, imgSrc }) => (
         borderColor='blackAlpha.200'
         borderRadius='8px'
         gap={{ base: '2', xl: '2', '2xl': '3' }}
+        _hover={{
+            cursor: 'pointer',
+            boxShadow:
+                '0 2px 4px -1px rgba(32, 126, 0, 0.06), 0 4px 6px -1px rgba(32, 126, 0, 0.1)',
+        }}
     >
         <Image src={imgSrc} alt={`${productTitle} фото`} />
         <Heading variant='cardTitle' noOfLines={1}>
