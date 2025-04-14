@@ -32,7 +32,7 @@ export const MenuListItem: FC<MenuListItemProps> = ({ item }) => (
     >
         <ChakraLink
             as={ReactRouterLink}
-            to={ROUTE_CONSTANTS.JUICY}
+            to={ROUTE_CONSTANTS.VEGAN_CUISINE}
             _hover={{
                 textDecoration: 'none',
             }}

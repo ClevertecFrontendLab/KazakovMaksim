@@ -1,28 +1,29 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
-import { FC } from 'react';
-import { Link as ReactRouterLink } from 'react-router';
+import { Link as ReactRouterLink, useLocation } from 'react-router';
 
-import { ROUTE_CONSTANTS } from '~/constants/routes';
+import { getBreadcrumbsFromPathname } from '~/helpers';
 
-interface BreadcrumbsProps {
-    breadcrumbs: string[];
-}
+export const Breadcrumbs = () => {
+    const { pathname } = useLocation();
 
-export const Breadcrumbs: FC<BreadcrumbsProps> = ({ breadcrumbs }) => (
-    <Breadcrumb
-        maxW='1152px'
-        w='100%'
-        color='blackAlpha.700'
-        spacing='8px'
-        separator={<ChevronRightIcon color='gray.500' />}
-    >
-        {breadcrumbs.map((bc) => (
-            <BreadcrumbItem key={bc}>
-                <BreadcrumbLink as={ReactRouterLink} to={ROUTE_CONSTANTS.APP}>
-                    {bc}
-                </BreadcrumbLink>
-            </BreadcrumbItem>
-        ))}
-    </Breadcrumb>
-);
+    const { breadcrumbs, parsedPath } = getBreadcrumbsFromPathname(pathname);
+
+    return (
+        <Breadcrumb
+            maxW='1152px'
+            w='100%'
+            color='blackAlpha.700'
+            spacing='8px'
+            separator={<ChevronRightIcon color='gray.500' />}
+        >
+            {breadcrumbs.map((bc, index) => (
+                <BreadcrumbItem key={bc}>
+                    <BreadcrumbLink as={ReactRouterLink} to={parsedPath[index]}>
+                        {bc}
+                    </BreadcrumbLink>
+                </BreadcrumbItem>
+            ))}
+        </Breadcrumb>
+    );
+};
