@@ -11,5 +11,6 @@ export { YeeDaaIcon } from './YeeDaaIcon';
 export { ArrowIcon } from './ArrowIcon';
 export { ExitIcon } from './ExitIcon';
 export { FilterIcon } from './FilterIcon';
+export { HomeIcon } from './HomeIcon';
 export { MagnifierIcon } from './MagnifierIcon';
 export { WriteRecipeIcon } from './WriteRecipeIcon';
