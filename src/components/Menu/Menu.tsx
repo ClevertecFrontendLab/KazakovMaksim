@@ -6,9 +6,12 @@ import {
     AccordionPanel,
     Box,
     Image,
+    Link as ChakraLink,
 } from '@chakra-ui/react';
+import { Link as ReactRouterLink } from 'react-router';
 
 import { categoryIcons, menuData } from '~/constants/mockData';
+import { ROUTE_CONSTANTS } from '~/constants/routes';
 
 import scrollStyles from './CustomScrollStyles';
 import { MenuList } from './MenuList/MenuList';
@@ -53,7 +56,17 @@ export const Menu = () => (
                                         src={categoryIcons[menuItem as MenuDataKeys]}
                                         alt={menuItem}
                                     />
-                                    {category.categoryName}
+                                    <ChakraLink
+                                        data-test-id={
+                                            category.categoryName === 'Веганская кухня'
+                                                ? 'vegan-cuisine'
+                                                : ''
+                                        }
+                                        as={ReactRouterLink}
+                                        to={ROUTE_CONSTANTS.VEGAN_CUISINE}
+                                    >
+                                        {category.categoryName}
+                                    </ChakraLink>
                                 </Box>
                                 <AccordionIcon />
                             </AccordionButton>
