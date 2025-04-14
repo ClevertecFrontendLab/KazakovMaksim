@@ -3,6 +3,7 @@ import { Container, VStack } from '@chakra-ui/react';
 import { FoodBlogSection } from '~/components/FoodBlogSection';
 import { JuicySection } from '~/components/JuicySection';
 import { RecipeSection } from '~/components/RecipeSection';
+import { RelevantSection } from '~/components/RelevantSection';
 import { SectionHeading } from '~/components/SectionHeading';
 
 const mockSectionHeading = {
@@ -25,6 +26,7 @@ const HomePage = () => (
                 <RecipeSection />
                 <JuicySection />
                 <FoodBlogSection />
+                <RelevantSection />
             </VStack>
         </VStack>
     </Container>

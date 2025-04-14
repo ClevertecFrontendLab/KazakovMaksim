@@ -18,23 +18,13 @@ import { BookmarkHeartIcon } from '~/components/icons';
 import { CardBadge } from '~/components/ProductCard/CardBadge';
 import { HCardBadge } from '~/components/ProductHCard/HCardBadge';
 import { ProfileNotifications } from '~/components/ProfileNotifications';
-import { ProfileNotificationsI } from '~/types';
-
-interface CategoryItem {
-    name: string;
-    imgSrc: string;
-}
+import { CategoryItem, ProductCardProps } from '~/types';
 
 interface RecommendationItem extends CategoryItem {}
 
-interface ProductHCardProps {
-    productTitle: string;
-    productDesc: string;
-    imgSrc: string;
-    profileNotifications?: ProfileNotificationsI;
-    category: CategoryItem;
+type ProductHCardProps = Omit<ProductCardProps, 'withImg'> & {
     recommendation?: RecommendationItem;
-}
+};
 
 export const ProductHCard: FC<ProductHCardProps> = ({
     productTitle,
@@ -119,7 +109,7 @@ export const ProductHCard: FC<ProductHCardProps> = ({
                         <IconButton
                             size='xs'
                             variant='outline'
-                            aria-label='Search database'
+                            aria-label='bookmark'
                             icon={<BookmarkHeartIcon />}
                         />
                     ) : (
@@ -134,17 +124,7 @@ export const ProductHCard: FC<ProductHCardProps> = ({
                             Сохранить
                         </Button>
                     )}
-                    <Button
-                        fontSize={{ base: '12px', lg: '12px', xl: '14px' }}
-                        lineHeight={{ base: 1.33, lg: 1.33, xl: 1.43 }}
-                        variant='solid'
-                        bg='blackAlpha.900'
-                        p={{ base: '4px 8px', lg: '4px 8px', xl: '5px 12px' }}
-                        h='initial'
-                        color='white'
-                    >
-                        Готовить
-                    </Button>
+                    <Button variant='cookButton'>Готовить</Button>
                 </CardFooter>
             </Stack>
 

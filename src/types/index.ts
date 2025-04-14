@@ -14,3 +14,17 @@ export interface ProfileNotificationsI {
     emojiHeart?: number;
     people?: number;
 }
+
+export interface CategoryItem {
+    name: string;
+    imgSrc: string;
+}
+
+export interface ProductCardProps {
+    productTitle: string;
+    productDesc: string;
+    imgSrc?: string;
+    profileNotifications?: ProfileNotificationsI;
+    category: CategoryItem;
+    withImg?: boolean;
+}

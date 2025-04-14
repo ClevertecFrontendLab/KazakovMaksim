@@ -247,7 +247,7 @@ export const mockProductCards = [
         imgSrc: cutlet,
         profileNotifications: { bookmarkHeart: 2, emojiHeart: 1 },
         category: {
-            name: 'Веганские блюда',
+            name: 'Первые блюда',
             imgSrc: veganCuisine,
         },
     },

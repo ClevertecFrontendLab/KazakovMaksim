@@ -18,8 +18,9 @@ const cardText = defineStyle({
 });
 
 const titleText = defineStyle({
-    lineHeight: 1.5,
     fontWeight: 500,
+    fontSize: ['sm', null, null, 'sm', 'md'],
+    lineHeight: [1.43, null, null, 1.43, 1.5],
     color: 'blackAlpha.600',
 });
 

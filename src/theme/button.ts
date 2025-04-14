@@ -12,8 +12,34 @@ const blogButton = defineStyle({
     bg: 'transparent',
 });
 
+const cookButtonBase = {
+    h: 'initial',
+};
+
+const cookButton = defineStyle({
+    ...cookButtonBase,
+    padding: ['4px 8px', null, null, null, '4px 8px', '5px 12px'],
+    fontSize: ['12px', null, null, null, '12px', '14px'],
+    lineHeight: [1.33, null, null, null, 1.33, 1.43],
+    bg: 'blackAlpha.900',
+    color: 'white',
+});
+
+const cookButtonShort = defineStyle({
+    ...cookButtonBase,
+    padding: ['7px', null, null, null, null, '7px', '5px 11px'],
+    fontSize: ['12px', null, null, null, null, '12px', '14px'],
+    lineHeight: [1.33, null, null, null, null, 1.33, 1.43],
+    bg: 'transparent',
+    color: 'lime.600',
+    border: '1px',
+    borderColor: 'lime.600',
+});
+
 export const buttonTheme = defineStyleConfig({
     variants: {
         blogButton,
+        cookButton,
+        cookButtonShort,
     },
 });
