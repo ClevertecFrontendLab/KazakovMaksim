@@ -1,7 +1,8 @@
 import { useBreakpointValue, VStack } from '@chakra-ui/react';
 
+import { WriteRecipeIcon } from '~/components/icons';
 import { ProfileNotifications } from '~/components/ProfileNotifications';
-import { WriteRecipeButton } from '~/components/WriteRecipeButton';
+import { RoundButton } from '~/components/RoundButton';
 import { mockProfileNotifications } from '~/constants/mockData';
 
 export const RightAside = () => {
@@ -28,7 +29,13 @@ export const RightAside = () => {
                 stack='v'
                 iconSize='md'
             />
-            <WriteRecipeButton />
+            <RoundButton
+                isAsideBtn
+                gap='3'
+                buttonText='Записать рецепт'
+                bg
+                Image={<WriteRecipeIcon />}
+            />
         </VStack>
     );
 };

@@ -2,7 +2,7 @@ import { Avatar, HStack } from '@chakra-ui/react';
 
 import avatar from '~/assets/img/avatar.jpg';
 import { HomeIcon, MagnifierIcon, WriteRecipeIcon } from '~/components/icons';
-import { WriteRecipeButton } from '~/components/WriteRecipeButton';
+import { RoundButton } from '~/components/RoundButton';
 
 export const Footer = () => (
     <HStack
@@ -18,12 +18,9 @@ export const Footer = () => (
         gap='0'
         maxW='100vw'
     >
-        <WriteRecipeButton buttonText='Главная' Image={<HomeIcon />} bg />
-        <WriteRecipeButton buttonText='Поиск' Image={<MagnifierIcon color='black' />} />
-        <WriteRecipeButton buttonText='Записать' Image={<WriteRecipeIcon color='black' />} />
-        <WriteRecipeButton
-            buttonText='Мой профиль'
-            Image={<Avatar src={avatar} size='superSm' />}
-        />
+        <RoundButton buttonText='Главная' Image={<HomeIcon />} bg />
+        <RoundButton buttonText='Поиск' Image={<MagnifierIcon color='black' />} />
+        <RoundButton buttonText='Записать' Image={<WriteRecipeIcon color='black' />} />
+        <RoundButton buttonText='Мой профиль' Image={<Avatar src={avatar} size='superSm' />} />
     </HStack>
 );
