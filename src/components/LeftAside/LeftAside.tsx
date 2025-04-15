@@ -1,4 +1,4 @@
-import { useBreakpointValue, VStack } from '@chakra-ui/react';
+import { useBreakpointValue, useMediaQuery, VStack } from '@chakra-ui/react';
 
 import { AsideFooter } from '~/components/LeftAside/AsideFooter/AsideFooter';
 import { Menu } from '~/components/Menu';
@@ -9,11 +9,13 @@ export const LeftAside = () => {
         md: true,
         lg: false,
     });
+    const [isLargerThan1920] = useMediaQuery('(min-width: 1920px)');
 
     if (isTablet) return null;
 
     return (
         <VStack
+            left={isLargerThan1920 ? 'calc((100vw - 1920px)/2)' : '0'}
             top='80px'
             pos='fixed'
             as='aside'

@@ -17,11 +17,15 @@ const HomePage = () => (
         as='section'
         maxW={{ lg: '1408px', md: 'none' }}
         px={{ base: '16px', md: '20px', lg: '24px' }}
-        pt={{ base: '96px', lg: '112px' }}
-        pb={{ base: '100px', lg: '100px', xl: '0' }}
+        pt={{ base: '80px', lg: '112px' }}
+        pb={{ base: '100px', md: '100px', lg: '0' }}
     >
         <VStack flexGrow='1' gap='0'>
-            <VStack pb='56px' gap='8'>
+            <VStack
+                pb={{ base: '32px', md: '32px', lg: '56px' }}
+                gap={{ base: '4', md: '4', lg: '8' }}
+                w='100%'
+            >
                 <SectionHeading {...mockSectionHeading} />
                 <SectionFilters />
             </VStack>

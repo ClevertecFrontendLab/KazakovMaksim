@@ -24,11 +24,16 @@ const mockOptions = [
     { id: 9, optionName: 'Шоколад' },
 ];
 
+type mockOption = {
+    id: number;
+    optionName: string;
+};
+
 export function MultipleSelect() {
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState<mockOption | null>(null);
     const { isOpen, onOpen, onClose } = useDisclosure();
 
-    const handleSelect = (option) => {
+    const handleSelect = (option: mockOption) => {
         setSelectedOption(option);
         onClose();
     };
@@ -37,6 +42,7 @@ export function MultipleSelect() {
         <Popover isOpen={isOpen} onClose={onClose} placement='bottom-start'>
             <PopoverTrigger>
                 <Button
+                    m='0 auto'
                     variant='outline'
                     onClick={onOpen}
                     maxW='234px'

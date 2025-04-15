@@ -23,7 +23,12 @@ export const RelevantSection = () => {
     const [isLessThan919] = useMediaQuery('(max-width: 919px)');
 
     return (
-        <Box alignSelf='stretch' position='relative'>
+        <Box
+            alignSelf='stretch'
+            position='relative'
+            borderTop='1px solid'
+            borderColor='blackAlpha.200'
+        >
             <HStack
                 spacing={{ base: '3', md: '3', xl: '6' }}
                 m={{ base: '8px 0 16px', md: '8px 0 16px', xl: '24px 0' }}

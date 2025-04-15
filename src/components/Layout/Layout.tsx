@@ -23,7 +23,7 @@ export const Layout = () => {
                 alignItems='flex-start'
                 gap='0'
                 m='0 auto'
-                pb={{ base: '100px', lg: '100px', xl: '0' }}
+                px={{ base: '0', md: '0', lg: '256px' }}
             >
                 <LeftAside />
                 <Suspense
