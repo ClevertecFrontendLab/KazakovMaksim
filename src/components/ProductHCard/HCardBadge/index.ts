@@ -1,0 +1,1 @@
+export { HCardBadge } from './HCardBadge';
